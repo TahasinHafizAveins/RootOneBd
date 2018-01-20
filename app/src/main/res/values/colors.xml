@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0091fc</color>
+    <color name="colorPrimaryDark">#1072ba</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="loginTextColor">#000000</color>
+    <color name="loginTextFieldColor">#4db3fd</color>
+    <color name="loginButtonColor">#12a750</color>
+    <color name="facebookLoginButtonColor">#3b5998</color>
+    <color name="googleLoginButtonColor">#d62d20</color>
+</resources>

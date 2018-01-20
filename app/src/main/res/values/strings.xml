@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RootOneBd</string>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <string name="login_forget_text">Forget Your Information? Click Here</string>
+    <string name="facebook_login_text">Continue With Facebook</string>
+    <string name="google_login_text">Continue With Google</string>
+</resources>

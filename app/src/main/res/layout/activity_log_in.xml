@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/login_padding"
+    android:paddingEnd="@dimen/login_padding"
+    android:background="@drawable/background"
+    tools:context="com.rootonebd.rootonebd.LogInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/rootonelogo"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rootone_logo"
+            android:layout_above="@+id/mail_login"
+            android:layout_marginBottom="30dp" />
+
+        <RelativeLayout
+            android:id="@+id/mail_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/forget_info">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_edit_text_height"
+                android:background="@color/loginTextFieldColor"
+                android:textColor="@color/loginTextColor"
+                android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:hint="Enter your mail Address"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_edit_text_height"
+                android:layout_below="@+id/email"
+                android:background="@color/loginTextFieldColor"
+                android:textColor="@color/loginTextColor"
+                android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:hint="Password"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/custom_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_below="@id/password"
+                android:background="@color/loginButtonColor"
+                android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:text="submit"/>
+
+        </RelativeLayout>
+
+        <!--Reference -->
+        <TextView
+            android:id="@+id/forget_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/login_forget_text"
+            android:textColor="@color/loginTextColor" />
+        <!--Reference -->
+
+        <RelativeLayout
+            android:id="@+id/social_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/forget_info">
+
+            <Button
+                android:id="@+id/facebook_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:background="@color/facebookLoginButtonColor"
+                android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:text="@string/facebook_login_text"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:paddingLeft="2dp"
+                android:drawableLeft="@drawable/facebook_icon"/>
+
+            <Button
+                android:id="@+id/google_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_below="@+id/facebook_btn"
+                android:background="@color/googleLoginButtonColor"
+                android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:text="@string/google_login_text"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:paddingLeft="2dp"
+                android:drawableLeft="@drawable/google_icon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
