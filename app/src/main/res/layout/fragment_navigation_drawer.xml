@@ -4,11 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#456789"
+    android:background="@color/colorPrimary"
     tools:context="com.rootonebd.rootonebd.NavigationDrawer">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/nav_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="6dp"
+        android:background="@color/colorPrimaryDark">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/user"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="2dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="10"
+            app:civ_shadow_color="#000000"/>
+
+        <RelativeLayout
+            android:id="@+id/profile_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Md. Ali Reza"/>
+
+            <TextView
+                android:id="@+id/profile_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_name"
+                android:text="aliza@gmail.com"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nav_bottom_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I am Fragment"/>
+        android:layout_below="@+id/nav_top_container"
+        android:paddingStart="4dp">
+
+        <RelativeLayout
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/navigation_item_padding">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home"/>
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_toRightOf="@+id/home_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:text="@string/home_text"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home"
+            android:padding="@dimen/navigation_item_padding">
+
+            <ImageView
+                android:id="@+id/about_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/about"/>
+            <TextView
+                android:id="@+id/about_text"
+                android:layout_toRightOf="@+id/about_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:text="@string/about_text"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about"
+            android:padding="@dimen/navigation_item_padding">
+
+            <ImageView
+                android:id="@+id/contact_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/contact"/>
+
+            <TextView
+                android:id="@+id/contact_text"
+                android:layout_toRightOf="@+id/contact_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:text="@string/contact_text"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact"
+            android:padding="@dimen/navigation_item_padding">
+
+            <ImageView
+                android:id="@+id/account_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/account"/>
+
+            <TextView
+                android:id="@+id/account_text"
+                android:layout_toRightOf="@+id/account_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:text="@string/account_text"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 </RelativeLayout>

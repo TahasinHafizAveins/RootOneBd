@@ -4,7 +4,15 @@
     <string name="drawer_open">drawer_open</string>
     <string name="drawer_close">drawer_close</string>
 
+    <!--Login Page Text-->
     <string name="login_forget_text">Forget Your Information? Click Here</string>
     <string name="facebook_login_text">Continue With Facebook</string>
     <string name="google_login_text">Continue With Google</string>
+
+    <!--Navigation Drawer Text-->
+    <string name="home_text">Home</string>
+    <string name="about_text">About Us</string>
+    <string name="contact_text">Contact Us</string>
+    <string name="account_text">Account Info.</string>
+
 </resources>

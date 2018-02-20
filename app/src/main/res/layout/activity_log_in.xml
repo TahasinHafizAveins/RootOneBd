@@ -49,6 +49,7 @@
                 android:background="@color/loginTextFieldColor"
                 android:textColor="@color/loginTextColor"
                 android:layout_marginBottom="@dimen/email_login_margin_bottom"
+                android:inputType="textPassword"
                 android:hint="Password"
                 android:textSize="13sp"
                 android:textStyle="bold"

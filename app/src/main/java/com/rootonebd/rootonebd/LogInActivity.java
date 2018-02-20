@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.rootonebd.rootonebd.Utilities.RootOneAppPref;
 
 public class LogInActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     private EditText etEmail, etPassword;
     private Button btnSubmit;
 
@@ -17,6 +20,7 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        mAuth = FirebaseAuth.getInstance();
 
         etEmail = findViewById(R.id.email);
         etPassword = findViewById(R.id.password);
@@ -36,4 +40,15 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
+
+    private void updateUI(FirebaseUser currentUser) {
+    }
+
 }
