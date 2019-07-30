@@ -51,6 +51,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser currentUser) {
+        Log.d("HHHH","Hello Atik");
     }
 
 }
